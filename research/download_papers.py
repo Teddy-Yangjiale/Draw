@@ -34,6 +34,26 @@ PAPERS = {
     # SIGGRAPH
     "3dgs.pdf": "https://arxiv.org/pdf/2308.04079",
     "instant_ngp.pdf": "https://arxiv.org/pdf/2201.05989",
+    # Second expansion: CVPR / ICCV / ECCV
+    "dino.pdf": "https://arxiv.org/pdf/2203.03605",
+    "mask2former.pdf": "https://arxiv.org/pdf/2112.01527",
+    "glip.pdf": "https://arxiv.org/pdf/2112.03857",
+    "controlnet.pdf": "https://arxiv.org/pdf/2302.05543",
+    "latent_diffusion.pdf": "https://arxiv.org/pdf/2112.10752",
+    "mipnerf360.pdf": "https://arxiv.org/pdf/2111.12077",
+    "nerfw.pdf": "https://arxiv.org/pdf/2008.02268",
+    "zero123.pdf": "https://arxiv.org/pdf/2303.11328",
+    "plenoxels.pdf": "https://arxiv.org/pdf/2112.05131",
+    "mipsplatting.pdf": "https://arxiv.org/pdf/2311.16493",
+    "gaussianeditor.pdf": "https://arxiv.org/pdf/2311.14521",
+    # Second expansion: AAAI / NeurIPS / ICLR / ICML / SIGGRAPH-adjacent
+    "sam2.pdf": "https://arxiv.org/pdf/2408.00714",
+    "vilt.pdf": "https://arxiv.org/pdf/2102.03334",
+    "beit3.pdf": "https://arxiv.org/pdf/2208.10442",
+    "flamingo.pdf": "https://arxiv.org/pdf/2204.14198",
+    "imagen.pdf": "https://arxiv.org/pdf/2205.11487",
+    "dreamgaussian.pdf": "https://arxiv.org/pdf/2309.16653",
+    "pointe.pdf": "https://arxiv.org/pdf/2212.08751",
 }
 
 

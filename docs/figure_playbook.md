@@ -1,6 +1,6 @@
 # 论文示意图绘制手册
 
-> 这是“怎么画”的处方；证据和 16 篇论文的拆解见 [`research/figure_analysis.md`](../research/figure_analysis.md)。
+> 这是“怎么画”的处方；证据和 34 篇论文的拆解见 [`research/figure_analysis.md`](../research/figure_analysis.md)。
 
 ## 0. 先选图型
 

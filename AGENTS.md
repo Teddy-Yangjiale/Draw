@@ -5,7 +5,7 @@
 
 ## 先读
 
-1. `research/figure_analysis.md`：16 篇 CVPR/AAAI/NeurIPS/ICLR/ICML/SIGGRAPH 论文的图法拆解。
+1. `research/figure_analysis.md`：34 篇 CVPR/ICCV/ECCV/AAAI/NeurIPS/ICLR/ICML/SIGGRAPH 论文的图法拆解。
 2. `docs/figure_playbook.md`：六种图型的尺寸、配色、箭头、检查清单。
 3. `docs/ops.md`：完整操作 API。
 4. `README.md`：整体工作流与限制。

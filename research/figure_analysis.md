@@ -1,10 +1,18 @@
-# 顶会论文示意图拆解（16 篇）
+# 顶会论文示意图拆解（34 篇）
 
-> 目的：从 CVPR / AAAI / NeurIPS / ICLR / ICML / SIGGRAPH 的真实论文图里，提炼出“图应该怎么画”的可执行规则，而不是泛泛谈审美。
+> 目的：从 CVPR / ICCV / ECCV / AAAI / NeurIPS / ICLR / ICML / SIGGRAPH 的 34 篇真实论文图里，提炼出“图应该怎么画”的可执行规则，而不是泛泛谈审美。
 >
 > 方法：从 arXiv 下载 PDF → 用 PyMuPDF 渲染页面 → 裁出方法总览图 / 概念图 / 结果网格。PDF 不提交到仓库（体积大），截图与分析提交。
 
-![16 篇论文图总览](figure_gallery_all.png)
+![第一批 16 篇论文图总览](figure_gallery_all.png)
+
+第二轮又补了 18 篇，并把 34 篇重新组织成 **3 张 16 图主题总览**（每张 16 图，部分经典图在不同主题中复用）：
+
+![CVPR/ICCV/ECCV 16 图](sheet_cvpr_iccv_eccv_16.png)
+
+![AAAI/NeurIPS/ICLR/ICML 16 图](sheet_aaai_neurips_iclr_icml_16.png)
+
+![SIGGRAPH/3D/结果 16 图](sheet_siggraph_3d_16.png)
 
 ## 样本
 
@@ -26,6 +34,24 @@
 | 14 | EOV-Seg | AAAI 2025 | Fig. 4 | 4 | 2412.08628 |
 | 15 | 3D Gaussian Splatting | SIGGRAPH 2023 | Fig. 2 | 5 | 2308.04079 |
 | 16 | Instant NGP | SIGGRAPH 2022 | Fig. 3 | 4 | 2201.05989 |
+| 17 | DINO | ICLR 2023 | Fig. 2 | 6 | 2203.03605 |
+| 18 | Mask2Former | CVPR 2022 | Fig. 2 | 3 | 2112.01527 |
+| 19 | GLIP | CVPR 2022 | Fig. 2 | 2 | 2112.03857 |
+| 20 | SAM 2 | ICLR 2025 | Fig. 1 | 2 | 2408.00714 |
+| 21 | ControlNet | ICCV 2023 | Fig. 2 | 3 | 2302.05543 |
+| 22 | ViLT | ICML 2021 | Fig. 3 | 4 | 2102.03334 |
+| 23 | BEiT-3 | ICML 2023 | Fig. 2 | 3 | 2208.10442 |
+| 24 | Flamingo | NeurIPS 2022 | Fig. 3 | 4 | 2204.14198 |
+| 25 | Latent Diffusion | CVPR 2022 | Fig. 3 | 4 | 2112.10752 |
+| 26 | Mip-NeRF 360 | CVPR 2022 | Fig. 3 | 4 | 2111.12077 |
+| 27 | NeRF-W | CVPR 2021 | Fig. 3 | 3 | 2008.02268 |
+| 28 | DreamGaussian | ICLR 2024 | Fig. 2 | 4 | 2309.16653 |
+| 29 | Zero-1-to-3 | ICCV 2023 | Fig. 3 | 3 | 2303.11328 |
+| 30 | Point-E | NeurIPS 2022 | Fig. 1 | 2 | 2212.08751 |
+| 31 | GaussianEditor | CVPR 2024 | Fig. 1 | 1 | 2311.14521 |
+| 32 | Plenoxels | CVPR 2022 | Fig. 2 | 3 | 2112.05131 |
+| 33 | Mip-Splatting | CVPR 2024 | Fig. 1 | 1 | 2311.16493 |
+| 34 | Imagen | NeurIPS 2022 | Fig. 1 | 2 | 2205.11487 |
 
 原始 PDF 不随仓库提交，运行：
 
@@ -48,12 +74,12 @@ python research/render_pages.py   # 可选：重新渲染整页截图
 
 | 图型 | 代表论文 | 什么时候用 | PPT 可行性 |
 |---|---|---|---|
-| 单主干架构 | SAM、Depth Anything、VGGT、SOIT、3DGS | 方法有清晰的 encoder→fusion→decoder 流程 | 很高，几乎全 PPT |
-| 两阶段 / 冻结-可训练 | HQ-SAM、BLIP-2、LoRA、EOV-Seg | 有预训练模型、只训练一小部分、或两阶段训练 | 很高，虚线框+色块 |
-| 逐步机制 | Instant NGP、Consistency Models | 需要解释一个关键操作/编码/轨迹 | 中高，网格/箭头/图片 |
-| 主图+放大面板 | Grounding DINO、EOV-Seg、HQ-SAM | 系统复杂，细节多，需要局部放大 | 高，但信息密度大 |
+| 单主干架构 | SAM、Depth Anything、VGGT、SOIT、3DGS、DINO、Mask2Former、Plenoxels | 方法有清晰的 encoder→fusion→decoder 流程 | 很高，几乎全 PPT |
+| 两阶段 / 冻结-可训练 | HQ-SAM、BLIP-2、LoRA、EOV-Seg、ControlNet、Flamingo | 有预训练模型、只训练一小部分、或两阶段训练 | 很高，虚线框+色块 |
+| 逐步机制 | Instant NGP、Consistency Models、Point-E、Plenoxels | 需要解释一个关键操作/编码/轨迹 | 中高，网格/箭头/图片 |
+| 主图+放大面板 | Grounding DINO、EOV-Seg、HQ-SAM、Mask2Former、Mip-Splatting | 系统复杂，细节多，需要局部放大 | 高，但信息密度大 |
 | 3D/渲染概念 | NeRF、4DGS、DreamFusion、3DGS | 涉及 3D 场景、光线、Gaussian、渲染 | 低，3D 主体需导入 |
-| 结果网格 / teaser | Diffusion Models Beat GANs、DreamFusion、3DGS | 用画质/多样性说话 | 高，图片网格 |
+| 结果网格 / teaser | Diffusion Models Beat GANs、DreamFusion、3DGS、Imagen、GaussianEditor | 用画质/多样性说话 | 高，图片网格 |
 | 轨迹/概念映射 | Consistency Models、LoRA | 一个核心思想，用箭头/轨迹解释 | 高，图片+曲线/箭头 |
 
 > 一张论文图通常混合 2 种图型：例如 DreamFusion = 3D 概念图 + 训练闭环；EOV-Seg = 主图 + 放大面板 + 图例。
@@ -192,7 +218,47 @@ python research/render_pages.py   # 可选：重新渲染整页截图
 
 ---
 
-## 从 16 篇图里得到的硬规则
+## 第二轮新增 18 篇：补充观察
+
+![Flamingo](crops/new_flamingo.png)
+
+![DreamGaussian](crops/new_dreamgaussian.png)
+
+![Mip-Splatting](crops/new_mipsplatting.png)
+
+| 论文 | 图法观察 |
+|---|---|
+| DINO | 蓝色特征金字塔 + 灰色 encoder/decoder + 小方块 query；用“Query Selection / Matching”标签解释数据流，颜色只分两类。 |
+| Mask2Former | 主图（pixel decoder + transformer decoder）+ 右侧 masked attention 放大；粉/蓝/绿三色块，虚线分隔主图与细节。 |
+| GLIP | 视觉/文本双 encoder + deep fusion + word-region 对齐矩阵；矩阵用表格而不是箭头，绿色/橙色框对应两种 prompt。 |
+| SAM 2 | 三栏 `(a) Task / (b) Model / (c) Data`；点线边框、浅绿/蓝/橙模块；一张图同时讲任务、模型、数据。 |
+| ControlNet | before/after 两栏：locked block + trainable copy + zero convolution；锁图标 + 虚线容器，极简。 |
+| ViLT | 单个 Transformer encoder，word/patch embedding 从下方进入；不同 token 类型用颜色 + 右侧图例区分。 |
+| BEiT-3 | 中央 Multiway Transformer + 右侧模态专家 inset；大色块 + 细线，信息密度低。 |
+| Flamingo | 冻结/可训练图例（雪花/粉色）、两个 vision encoder + resampler + gated cross-attn；蓝/粉两色贯穿。 |
+| Latent Diffusion | pixel space ↔ latent space 两个大区域；cross-attention 用 Q/K/V 小卡片；底部图标图例。 |
+| Mip-NeRF 360 | 上“baseline”下“ours”两行同构对比；蓝/绿/粉模块 + 黄色 loss 点，适合“改进型”架构图。 |
+| NeRF-W | 三组 MLP 堆叠（static / transient），输出 RGB/σ/β；用颜色区分静态/瞬态，没有 3D 场景。 |
+| DreamGaussian | 三个橙色虚线面板 (i)(ii)(iii)，每块一个 3D 角色渲染 + 箭头；流程和 3D 资产混合。 |
+| Zero-1-to-3 | 输入图 + noise + 黄色 latent diffusion + 输出图；单行，极简。 |
+| Point-E | text → GLIDE → synthetic view → point diffusion → point cloud；上方 pipeline，下方结果网格。 |
+| GaussianEditor | 3×3 结果网格，每对“原图/编辑图”+ prompt + 箭头；不讲架构，讲可控编辑。 |
+| Plenoxels | 4 步 a/b/c/d：voxel grid → trilinear interpolation → volume rendering → optimization；3D 元素多，但流程是一行。 |
+| Mip-Splatting | 2×2 对比 + 红色 zoom-in 框；3D/2D Gaussian 示意图 + 真实自行车渲染，解释 aliasing 来源。 |
+| Imagen | 纯样本网格（3×3），无架构；图片质量就是论点。 |
+
+**归类**：
+
+- 查询式架构：DINO、Mask2Former。
+- 视觉-语言：GLIP、ViLT、BEiT-3、Flamingo、BLIP-2。
+- 两阶段/冻结：ControlNet、Flamingo、HQ-SAM、BLIP-2。
+- 扩散/生成：LDM、Imagen、DreamFusion、DreamGaussian、Zero-1-to-3。
+- 3D/Gaussian：NeRF、4DGS、3DGS、Instant NGP、Mip-NeRF 360、NeRF-W、Point-E、Plenoxels、Mip-Splatting、GaussianEditor。
+- 结果/对比：Diffusion Beat GANs、GaussianEditor、Imagen、Mip-Splatting。
+
+---
+
+## 从 34 篇图里得到的硬规则
 
 ### 1. 布局
 

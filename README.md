@@ -23,9 +23,17 @@
 | AI 直接写 OOXML | LLM 容易写坏文件；出错难定位；人也看不懂 |
 | **AI 操作原生 PPT 形状** | **可编辑、可回读、可版本化；你能接着改** |
 
-顶会论文里的方法总览图，绝大多数本来就是“模块框 + 细箭头 + 虚线容器 + 图片/热力图”的组合。我们拆了 **16 篇** CVPR / AAAI / NeurIPS / ICLR / ICML / SIGGRAPH 论文验证这件事：见 [`research/figure_analysis.md`](research/figure_analysis.md)；具体怎么画见 [`docs/figure_playbook.md`](docs/figure_playbook.md)。
+顶会论文里的方法总览图，绝大多数本来就是“模块框 + 细箭头 + 虚线容器 + 图片/热力图”的组合。我们拆了 **34 篇** CVPR / ICCV / ECCV / AAAI / NeurIPS / ICLR / ICML / SIGGRAPH 论文验证这件事：见 [`research/figure_analysis.md`](research/figure_analysis.md)；具体怎么画见 [`docs/figure_playbook.md`](docs/figure_playbook.md)。
 
-![16 篇论文示意图总览](research/figure_gallery_all.png)
+三张 16 图主题总览（每张 16 张论文图）：
+
+![CVPR/ICCV/ECCV 16 图](research/sheet_cvpr_iccv_eccv_16.png)
+
+![AAAI/NeurIPS/ICLR/ICML 16 图](research/sheet_aaai_neurips_iclr_icml_16.png)
+
+![SIGGRAPH/3D/结果 16 图](research/sheet_siggraph_3d_16.png)
+
+每张 16 图；为保持主题完整，少数经典图会在不同主题中复用，去重后共 34 篇论文。
 
 ---
 
@@ -326,13 +334,15 @@ examples/
 tests/            pytest 单元测试
 .github/workflows/ci.yml   Ubuntu/macOS/Windows CI
 research/
-  figure_analysis.md      16 篇顶会论文拆解
-  figure_gallery_all.png  16 篇总览
+  figure_analysis.md      34 篇顶会论文拆解
+  sheet_*_16.png          3 张 16 图主题总览
+  figure_gallery_all.png  第一批 16 篇总览
   figure_gallery_architecture.png / figure_gallery_concepts.png
   crops/                  已提交的裁图
   download_papers.py      按需下载原始 PDF
   render_pages.py         按需渲染整页截图
-  make_galleries.py       重新生成论文图总览
+  make_galleries.py       重新生成第一批总览
+  make_three_sheets.py    重新生成 3 张 16 图主题总览
 out/
   cvpr_demo.pptx / .png
   cvpr_demo_edited.pptx / .png
