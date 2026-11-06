@@ -12,11 +12,28 @@ import urllib.request
 from pathlib import Path
 
 PAPERS = {
+    # CVPR / ICCV / ECCV
     "sam.pdf": "https://arxiv.org/pdf/2304.02643",
     "depth_anything.pdf": "https://arxiv.org/pdf/2401.10891",
     "vggt.pdf": "https://arxiv.org/pdf/2503.11651",
     "grounding_dino.pdf": "https://arxiv.org/pdf/2303.05499",
     "nerf.pdf": "https://arxiv.org/pdf/2003.08934",
+    "4dgs.pdf": "https://arxiv.org/pdf/2310.10642",
+    # NeurIPS
+    "hq_sam.pdf": "https://arxiv.org/pdf/2306.01567",
+    "diffusion_beat_gans.pdf": "https://arxiv.org/pdf/2105.05233",
+    # ICLR
+    "lora.pdf": "https://arxiv.org/pdf/2106.09685",
+    "dreamfusion.pdf": "https://arxiv.org/pdf/2209.14988",
+    # ICML
+    "blip2.pdf": "https://arxiv.org/pdf/2301.12597",
+    "consistency_models.pdf": "https://arxiv.org/pdf/2303.01469",
+    # AAAI
+    "soit.pdf": "https://arxiv.org/pdf/2112.11037",
+    "eov_seg.pdf": "https://arxiv.org/pdf/2412.08628",
+    # SIGGRAPH
+    "3dgs.pdf": "https://arxiv.org/pdf/2308.04079",
+    "instant_ngp.pdf": "https://arxiv.org/pdf/2201.05989",
 }
 
 

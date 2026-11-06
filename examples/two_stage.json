@@ -1,0 +1,189 @@
+{
+  "slide": 1,
+  "ops": [
+    {
+      "op": "add_text",
+      "name": "fig.panel",
+      "text": "(a) Two-stage adaptation",
+      "x": 0.16,
+      "y": 0.08,
+      "w": 2.8,
+      "h": 0.22,
+      "font_size": 9.0,
+      "text_color": "5B6773",
+      "bold": true,
+      "align": "left",
+      "anchor": "top"
+    },
+    {
+      "op": "add_container",
+      "name": "fig.container.frozen",
+      "x": 0.7,
+      "y": 0.55,
+      "w": 2.62,
+      "h": 1.45,
+      "label": "Stage 1 · frozen backbone",
+      "style": "container"
+    },
+    {
+      "op": "add_container",
+      "name": "fig.container.train",
+      "x": 3.55,
+      "y": 0.55,
+      "w": 3.4,
+      "h": 1.45,
+      "label": "Stage 2 · trainable adapter",
+      "style": "container"
+    },
+    {
+      "op": "add_picture",
+      "name": "fig.input",
+      "path": "../out/assets/synthetic_input.png",
+      "x": 0.14,
+      "y": 0.95,
+      "w": 0.46,
+      "h": 0.5
+    },
+    {
+      "op": "add_shape",
+      "name": "fig.encoder",
+      "shape": "trapezoid",
+      "x": 0.88,
+      "y": 0.98,
+      "w": 1.0,
+      "h": 0.48,
+      "text": "Image\nEncoder",
+      "style": "blue",
+      "font_size": 8.5
+    },
+    {
+      "op": "add_text",
+      "name": "fig.tag.frozen",
+      "text": "frozen",
+      "x": 0.92,
+      "y": 0.78,
+      "w": 0.55,
+      "h": 0.2,
+      "font_size": 8.0,
+      "text_color": "3D6FA8",
+      "align": "left",
+      "anchor": "top"
+    },
+    {
+      "op": "add_shape",
+      "name": "fig.qformer",
+      "shape": "roundRect",
+      "x": 2.18,
+      "y": 0.98,
+      "w": 0.98,
+      "h": 0.48,
+      "text": "Q-Former",
+      "style": "yellow",
+      "font_size": 8.5
+    },
+    {
+      "op": "add_shape",
+      "name": "fig.adapter",
+      "shape": "roundRect",
+      "x": 3.92,
+      "y": 0.98,
+      "w": 1.1,
+      "h": 0.48,
+      "text": "Adapter",
+      "style": "orange",
+      "font_size": 8.5
+    },
+    {
+      "op": "add_text",
+      "name": "fig.tag.trainable",
+      "text": "trainable",
+      "x": 3.96,
+      "y": 0.78,
+      "w": 0.75,
+      "h": 0.2,
+      "font_size": 8.0,
+      "text_color": "C98A62",
+      "align": "left",
+      "anchor": "top"
+    },
+    {
+      "op": "add_picture",
+      "name": "fig.output",
+      "path": "../out/assets/synthetic_depth.png",
+      "x": 5.45,
+      "y": 0.93,
+      "w": 0.78,
+      "h": 0.52
+    },
+    {
+      "op": "add_connector",
+      "name": "fig.edge.input--encoder",
+      "from": "fig.input",
+      "to": "fig.encoder",
+      "from_side": "right",
+      "to_side": "left",
+      "arrow": "end"
+    },
+    {
+      "op": "add_connector",
+      "name": "fig.edge.encoder--qformer",
+      "from": "fig.encoder",
+      "to": "fig.qformer",
+      "from_side": "right",
+      "to_side": "left",
+      "arrow": "end"
+    },
+    {
+      "op": "add_connector",
+      "name": "fig.edge.qformer--adapter",
+      "from": "fig.qformer",
+      "to": "fig.adapter",
+      "from_side": "right",
+      "to_side": "left",
+      "arrow": "end"
+    },
+    {
+      "op": "add_connector",
+      "name": "fig.edge.adapter--output",
+      "from": "fig.adapter",
+      "to": "fig.output",
+      "from_side": "right",
+      "to_side": "left",
+      "arrow": "end"
+    },
+    {
+      "op": "add_text",
+      "name": "fig.legend.frozen",
+      "text": "frozen",
+      "x": 0.72,
+      "y": 2.1,
+      "w": 0.55,
+      "h": 0.2,
+      "font_size": 8.0,
+      "text_color": "3D6FA8",
+      "align": "left",
+      "anchor": "top"
+    },
+    {
+      "op": "add_text",
+      "name": "fig.legend.trainable",
+      "text": "trainable",
+      "x": 1.35,
+      "y": 2.1,
+      "w": 0.75,
+      "h": 0.2,
+      "font_size": 8.0,
+      "text_color": "C98A62",
+      "align": "left",
+      "anchor": "top"
+    },
+    {
+      "op": "normalize_z"
+    },
+    {
+      "op": "fit_canvas",
+      "margin": 0.08,
+      "keep_width": true
+    }
+  ]
+}

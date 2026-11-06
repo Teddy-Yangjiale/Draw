@@ -5,9 +5,10 @@
 
 ## 先读
 
-1. `research/figure_analysis.md`：5 篇 CVPR/ICCV/ECCV 论文的图法拆解。
-2. `docs/ops.md`：完整操作 API。
-3. `README.md`：整体工作流与限制。
+1. `research/figure_analysis.md`：16 篇 CVPR/AAAI/NeurIPS/ICLR/ICML/SIGGRAPH 论文的图法拆解。
+2. `docs/figure_playbook.md`：六种图型的尺寸、配色、箭头、检查清单。
+3. `docs/ops.md`：完整操作 API。
+4. `README.md`：整体工作流与限制。
 
 ## 绝对原则
 
@@ -44,7 +45,7 @@ Windows 把 `./draw` 换成 `draw.cmd`，或直接用 `py -m pptdraw` / `pptdraw
 
 ### 2. 规划
 
-在写 JSON 前，先用一两句话确定：
+在写 JSON 前，先用一两句话确定**图型**：单主干 pipeline / 冻结-可训练双区 / 逐步机制 / 主图+放大 / 结果网格 / 3D 概念 / 轨迹映射。不同图型的尺寸和配色见 `docs/figure_playbook.md`。
 
 - 画布：双栏 `7.16 × 2.4–3.2 in`，单栏 `3.5 × 2.0–2.8 in`。
 - 主流程：从左到右 4–7 个模块；主路径一条水平轴。

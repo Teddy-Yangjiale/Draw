@@ -23,9 +23,9 @@
 | AI 直接写 OOXML | LLM 容易写坏文件；出错难定位；人也看不懂 |
 | **AI 操作原生 PPT 形状** | **可编辑、可回读、可版本化；你能接着改** |
 
-顶会论文里的方法总览图，绝大多数本来就是“模块框 + 细箭头 + 虚线容器 + 图片/热力图”的组合。我们拆了 5 篇论文验证这件事：见 [`research/figure_analysis.md`](research/figure_analysis.md)。
+顶会论文里的方法总览图，绝大多数本来就是“模块框 + 细箭头 + 虚线容器 + 图片/热力图”的组合。我们拆了 **16 篇** CVPR / AAAI / NeurIPS / ICLR / ICML / SIGGRAPH 论文验证这件事：见 [`research/figure_analysis.md`](research/figure_analysis.md)；具体怎么画见 [`docs/figure_playbook.md`](docs/figure_playbook.md)。
 
-![论文示意图规律](research/figure_analysis_sheet.png)
+![16 篇论文示意图总览](research/figure_gallery_all.png)
 
 ---
 
@@ -137,6 +137,13 @@ open -a wpsoffice out/cvpr_demo.pptx     # macOS
 ```bash
 ./draw new out/grid.pptx --size 3.5x2.3
 ./draw apply out/grid.pptx examples/image_grid.json --png out/grid.png
+```
+
+冻结/可训练双区（类似 HQ-SAM / BLIP-2）：
+
+```bash
+./draw new out/two_stage.pptx --size 7.16x2.5
+./draw apply out/two_stage.pptx examples/two_stage.json --png out/two_stage.png
 ```
 
 ---
@@ -315,19 +322,23 @@ pptdraw/
 examples/
   edit_example.json
   image_grid.json
+  two_stage.json
 tests/            pytest 单元测试
 .github/workflows/ci.yml   Ubuntu/macOS/Windows CI
 research/
-  figure_analysis.md      5 篇顶会论文拆解
-  figure_analysis_sheet.png
+  figure_analysis.md      16 篇顶会论文拆解
+  figure_gallery_all.png  16 篇总览
+  figure_gallery_architecture.png / figure_gallery_concepts.png
   crops/                  已提交的裁图
   download_papers.py      按需下载原始 PDF
   render_pages.py         按需渲染整页截图
+  make_galleries.py       重新生成论文图总览
 out/
   cvpr_demo.pptx / .png
   cvpr_demo_edited.pptx / .png
   cvpr_demo_human.pptx / .png
 docs/ops.md
+docs/figure_playbook.md   图型处方：尺寸/颜色/箭头/检查清单
 draw / draw.cmd / draw.ps1   三个平台入口
 AGENTS.md      AI 操作协议（OpenCode 会自动读取）
 PROMPT.md      给 ChatGPT/Claude 的复制粘贴提示词

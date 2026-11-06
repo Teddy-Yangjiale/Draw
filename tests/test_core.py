@@ -297,3 +297,17 @@ def test_fit_canvas_crops_to_content(tmp_path: Path):
     shape = next(s for s in data["shapes"] if s["name"] == "fig.only")
     assert shape["x"] == pytest.approx(0.1, abs=0.02)
     assert shape["y"] == pytest.approx(0.25, abs=0.02)
+
+
+def test_example_two_stage_ops(tmp_path: Path):
+    import json
+
+    repo = Path(__file__).resolve().parents[1]
+    deck = tmp_path / "two_stage.pptx"
+    new_deck(deck, size=(7.16, 2.5))
+    with open(repo / "examples/two_stage.json", encoding="utf-8") as handle:
+        ops = json.load(handle)
+    apply_ops(deck, ops, base_dir=repo / "examples", backup=False)
+    assert lint_deck(deck) == []
+    names = {s["name"] for s in inspect_deck(deck)["shapes"]}
+    assert {"fig.encoder", "fig.qformer", "fig.adapter", "fig.output"} <= names

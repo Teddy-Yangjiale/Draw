@@ -16,6 +16,17 @@ PAGES = {
     "vggt": [1, 3],
     "grounding_dino": [1, 2, 3, 5],
     "nerf": [1, 2, 3, 5],
+    "4dgs": [2, 4],
+    "hq_sam": [4],
+    "diffusion_beat_gans": [1],
+    "lora": [1],
+    "dreamfusion": [5],
+    "blip2": [1],
+    "consistency_models": [1],
+    "soit": [3],
+    "eov_seg": [4],
+    "3dgs": [5],
+    "instant_ngp": [4],
 }
 
 
