@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.DS_Store
+.pptdraw/history/
+out/.pptdraw/
+out/assets/*.pyc
+research/papers/*.pdf
+research/pages/
+
+*.egg-info/
+.pytest_cache/
+
+build/
+dist/

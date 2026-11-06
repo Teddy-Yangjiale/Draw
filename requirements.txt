@@ -1,0 +1,11 @@
+# Core
+python-pptx>=1.0
+Pillow>=9.0
+lxml>=4.9
+
+# Demo assets (synthetic input/depth/point cloud)
+numpy>=1.24
+matplotlib>=3.7
+
+# Optional: PDF page rendering for the paper-analysis scripts
+pymupdf>=1.23

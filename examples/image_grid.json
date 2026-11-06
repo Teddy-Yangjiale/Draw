@@ -1,0 +1,39 @@
+{
+  "slide": 1,
+  "ops": [
+    {
+      "op": "add_text",
+      "name": "fig.panel",
+      "text": "(b) Qualitative comparison",
+      "x": 0.16,
+      "y": 0.08,
+      "w": 2.8,
+      "h": 0.22,
+      "font_size": 9.0,
+      "text_color": "5B6773",
+      "bold": true,
+      "align": "left",
+      "anchor": "top"
+    },
+    {
+      "op": "add_image_grid",
+      "images": [
+        "../out/assets/synthetic_input.png",
+        "../out/assets/synthetic_depth.png",
+        "../out/assets/synthetic_points.png",
+        "../out/assets/synthetic_input.png"
+      ],
+      "labels": ["Input", "Depth", "Point map", "Ours"],
+      "cols": 2,
+      "x": 0.22,
+      "y": 0.42,
+      "cell_w": 1.45,
+      "cell_h": 0.86,
+      "gap": 0.14,
+      "label_h": 0.18,
+      "label_size": 8.0,
+      "prefix": "fig.image.demo"
+    },
+    {"op": "normalize_z"}
+  ]
+}

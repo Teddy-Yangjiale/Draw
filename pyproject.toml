@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pptdraw"
+version = "0.1.0"
+description = "AI-editable, human-editable paper figures as native PPTX"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Teddy-Yangjiale" }]
+keywords = ["powerpoint", "pptx", "paper", "figures", "ai", "cvpr"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Visualization",
+  "Topic :: Office/Business :: Office Suites",
+]
+dependencies = [
+  "python-pptx>=1.0",
+  "Pillow>=9.0",
+  "lxml>=4.9",
+]
+
+[project.optional-dependencies]
+demo = ["numpy>=1.24", "matplotlib>=3.7"]
+preview = ["pymupdf>=1.23"]
+research = ["pymupdf>=1.23"]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[project.scripts]
+pptdraw = "pptdraw.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Teddy-Yangjiale/Draw"
+Repository = "https://github.com/Teddy-Yangjiale/Draw"
+Issues = "https://github.com/Teddy-Yangjiale/Draw/issues"
+
+[tool.setuptools]
+packages = ["pptdraw"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

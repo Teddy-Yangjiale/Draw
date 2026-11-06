@@ -1,0 +1,95 @@
+{
+  "slide": 1,
+  "ops": [
+    {
+      "op": "set_text",
+      "name": "fig.encoder",
+      "text": "Visual Encoder\n(ViT-B)",
+      "font_size": 9.5
+    },
+    {
+      "op": "set_text",
+      "name": "fig.decoder",
+      "text": "Multi-Task\nDecoder",
+      "font_size": 9.5
+    },
+    {
+      "op": "set_style",
+      "name": "fig.decoder",
+      "style": "accent"
+    },
+    {
+      "op": "add_text",
+      "name": "fig.badge.frozen",
+      "text": "frozen",
+      "x": 1.48,
+      "y": 0.68,
+      "w": 0.55,
+      "h": 0.2,
+      "font_size": 8.0,
+      "text_color": "C05243",
+      "align": "center",
+      "anchor": "middle"
+    },
+    {
+      "op": "add_shape",
+      "name": "fig.token.1",
+      "shape": "roundRect",
+      "x": 3.42,
+      "y": 0.22,
+      "w": 0.13,
+      "h": 0.13,
+      "style": "orange",
+      "radius": 0.02
+    },
+    {
+      "op": "add_shape",
+      "name": "fig.token.2",
+      "shape": "roundRect",
+      "x": 3.62,
+      "y": 0.22,
+      "w": 0.13,
+      "h": 0.13,
+      "style": "orange",
+      "radius": 0.02
+    },
+    {
+      "op": "add_shape",
+      "name": "fig.token.3",
+      "shape": "roundRect",
+      "x": 3.82,
+      "y": 0.22,
+      "w": 0.13,
+      "h": 0.13,
+      "style": "orange",
+      "radius": 0.02
+    },
+    {
+      "op": "add_text",
+      "name": "fig.label.tokens",
+      "text": "camera tokens",
+      "x": 3.12,
+      "y": 0.04,
+      "w": 1.15,
+      "h": 0.16,
+      "font_size": 8.0,
+      "text_color": "5B6773",
+      "align": "center",
+      "anchor": "top"
+    },
+    {
+      "op": "add_connector",
+      "name": "fig.edge.tokens--attention",
+      "from": "fig.token.2",
+      "to": "fig.attention",
+      "from_side": "bottom",
+      "to_side": "top",
+      "arrow": "end",
+      "dash": "dash",
+      "line_width": 0.9
+    },
+    {
+      "op": "normalize_z"
+    }
+  ]
+}

@@ -1,0 +1,476 @@
+{
+  "file": "/Users/Admin/Desktop/Draw/out/cvpr_demo.pptx",
+  "slide": 1,
+  "slides": 1,
+  "canvas": {
+    "width": 7.16,
+    "height": 2.6
+  },
+  "name": "CVPR-style demo",
+  "shape_count": 21,
+  "connector_count": 7,
+  "bounds": {
+    "x": 0.14,
+    "y": 0.08,
+    "right": 6.99,
+    "bottom": 2.24
+  },
+  "shapes": [
+    {
+      "name": "fig.edge.input--encoder",
+      "kind": "connector",
+      "x": 1.14,
+      "y": 1.14,
+      "w": 0.24,
+      "h": 0.05,
+      "z": 0,
+      "from_side": "right",
+      "to_side": "left",
+      "arrow": "end",
+      "line": "4B5763",
+      "line_width": 1.0,
+      "dash": "solid",
+      "points": [
+        [
+          1.14,
+          1.14
+        ],
+        [
+          1.38,
+          1.19
+        ]
+      ],
+      "role": "edge",
+      "from": "fig.input",
+      "to": "fig.encoder"
+    },
+    {
+      "name": "fig.edge.encoder--attention",
+      "kind": "connector",
+      "x": 2.56,
+      "y": 1.19,
+      "w": 0.34,
+      "h": 0.02,
+      "z": 1,
+      "from_side": "right",
+      "to_side": "left",
+      "arrow": "end",
+      "line": "4B5763",
+      "line_width": 1.0,
+      "dash": "solid",
+      "points": [
+        [
+          2.56,
+          1.19
+        ],
+        [
+          2.9,
+          1.21
+        ]
+      ],
+      "role": "edge",
+      "from": "fig.encoder",
+      "to": "fig.attention"
+    },
+    {
+      "name": "fig.edge.attention--decoder",
+      "kind": "connector",
+      "x": 4.54,
+      "y": 1.19,
+      "w": 0.24,
+      "h": 0.02,
+      "z": 2,
+      "from_side": "right",
+      "to_side": "left",
+      "arrow": "end",
+      "line": "4B5763",
+      "line_width": 1.0,
+      "dash": "solid",
+      "points": [
+        [
+          4.54,
+          1.21
+        ],
+        [
+          4.78,
+          1.19
+        ]
+      ],
+      "role": "edge",
+      "from": "fig.attention",
+      "to": "fig.decoder"
+    },
+    {
+      "name": "fig.edge.decoder--depth",
+      "kind": "connector",
+      "x": 5.9,
+      "y": 0.94,
+      "w": 0.26,
+      "h": 0.25,
+      "z": 3,
+      "from_side": "right",
+      "to_side": "left",
+      "arrow": "end",
+      "line": "4B5763",
+      "line_width": 1.0,
+      "dash": "solid",
+      "points": [
+        [
+          5.9,
+          1.19
+        ],
+        [
+          6.16,
+          0.94
+        ]
+      ],
+      "role": "edge",
+      "from": "fig.decoder",
+      "to": "fig.output.depth"
+    },
+    {
+      "name": "fig.edge.decoder--points",
+      "kind": "connector",
+      "x": 5.9,
+      "y": 1.19,
+      "w": 0.271,
+      "h": 0.47,
+      "z": 4,
+      "from_side": "right",
+      "to_side": "left",
+      "arrow": "end",
+      "line": "4B5763",
+      "line_width": 1.0,
+      "dash": "solid",
+      "points": [
+        [
+          5.9,
+          1.19
+        ],
+        [
+          6.171,
+          1.66
+        ]
+      ],
+      "role": "edge",
+      "from": "fig.decoder",
+      "to": "fig.output.points"
+    },
+    {
+      "name": "fig.edge.skip.anchor",
+      "kind": "rect",
+      "x": 1.97,
+      "y": 2.24,
+      "w": 3.37,
+      "h": 0.0,
+      "z": 5,
+      "fill": null,
+      "line": "4B5763",
+      "line_width": 0.5,
+      "dash": "dash",
+      "alt": "pptdraw:route-anchor:fig.edge.skip:bottom",
+      "role": "route"
+    },
+    {
+      "name": "fig.edge.skip.seg1",
+      "kind": "connector",
+      "x": 1.97,
+      "y": 1.48,
+      "w": 0.001,
+      "h": 0.76,
+      "z": 6,
+      "from_side": "bottom",
+      "to_side": "left",
+      "arrow": "none",
+      "line": "4B5763",
+      "line_width": 1.0,
+      "dash": "dash",
+      "points": [
+        [
+          1.97,
+          1.48
+        ],
+        [
+          1.97,
+          2.24
+        ]
+      ],
+      "role": "edge",
+      "from": "fig.encoder",
+      "to": "fig.edge.skip.anchor"
+    },
+    {
+      "name": "fig.edge.skip.seg2",
+      "kind": "connector",
+      "x": 5.34,
+      "y": 1.48,
+      "w": 0.001,
+      "h": 0.76,
+      "z": 7,
+      "from_side": "right",
+      "to_side": "bottom",
+      "arrow": "end",
+      "line": "4B5763",
+      "line_width": 1.0,
+      "dash": "dash",
+      "points": [
+        [
+          5.34,
+          2.24
+        ],
+        [
+          5.34,
+          1.48
+        ]
+      ],
+      "role": "edge",
+      "from": "fig.edge.skip.anchor",
+      "to": "fig.decoder"
+    },
+    {
+      "name": "fig.attention",
+      "kind": "roundRect",
+      "x": 2.9,
+      "y": 0.58,
+      "w": 1.64,
+      "h": 1.26,
+      "z": 8,
+      "text": "Attention Block   × L",
+      "font_size": 9.0,
+      "bold": false,
+      "align": "left",
+      "valign": "top",
+      "text_color": "66727E",
+      "fill": "FBFCFD",
+      "line": "C9D2DA",
+      "line_width": 1.0,
+      "dash": "dash",
+      "alt": "pptdraw:container:fig.attention",
+      "role": "container"
+    },
+    {
+      "name": "fig.input",
+      "kind": "picture",
+      "x": 0.2,
+      "y": 0.846,
+      "w": 0.94,
+      "h": 0.587,
+      "z": 9,
+      "alt": "pptdraw:image:/Users/Admin/Desktop/Draw/out/assets/synthetic_input.png",
+      "role": "image"
+    },
+    {
+      "name": "fig.encoder",
+      "kind": "roundRect",
+      "x": 1.38,
+      "y": 0.9,
+      "w": 1.18,
+      "h": 0.58,
+      "z": 10,
+      "text": "Image\nEncoder",
+      "font_size": 10.0,
+      "bold": false,
+      "align": "center",
+      "valign": "middle",
+      "text_color": "1F3D2A",
+      "lines": [
+        "Image",
+        "Encoder"
+      ],
+      "fill": "DFF0E4",
+      "line": "6A9E7A",
+      "line_width": 1.0,
+      "dash": "solid",
+      "role": "node"
+    },
+    {
+      "name": "fig.attn.frame",
+      "kind": "roundRect",
+      "x": 3.02,
+      "y": 0.96,
+      "w": 1.4,
+      "h": 0.34,
+      "z": 11,
+      "text": "Frame-wise Attention",
+      "font_size": 9.0,
+      "bold": false,
+      "align": "center",
+      "valign": "middle",
+      "text_color": "1E3A52",
+      "fill": "DCEBF7",
+      "line": "5B8DB8",
+      "line_width": 1.0,
+      "dash": "solid",
+      "role": "node"
+    },
+    {
+      "name": "fig.attn.global",
+      "kind": "roundRect",
+      "x": 3.02,
+      "y": 1.38,
+      "w": 1.4,
+      "h": 0.34,
+      "z": 12,
+      "text": "Global Attention",
+      "font_size": 9.0,
+      "bold": false,
+      "align": "center",
+      "valign": "middle",
+      "text_color": "1E3A52",
+      "fill": "DCEBF7",
+      "line": "5B8DB8",
+      "line_width": 1.0,
+      "dash": "solid",
+      "role": "node"
+    },
+    {
+      "name": "fig.decoder",
+      "kind": "roundRect",
+      "x": 4.78,
+      "y": 0.9,
+      "w": 1.12,
+      "h": 0.58,
+      "z": 13,
+      "text": "Task\nDecoder",
+      "font_size": 10.0,
+      "bold": false,
+      "align": "center",
+      "valign": "middle",
+      "text_color": "4D2A18",
+      "lines": [
+        "Task",
+        "Decoder"
+      ],
+      "fill": "FBE7D8",
+      "line": "C98A62",
+      "line_width": 1.0,
+      "dash": "solid",
+      "role": "node"
+    },
+    {
+      "name": "fig.output.depth",
+      "kind": "picture",
+      "x": 6.16,
+      "y": 0.715,
+      "w": 0.72,
+      "h": 0.45,
+      "z": 14,
+      "alt": "pptdraw:image:/Users/Admin/Desktop/Draw/out/assets/synthetic_depth.png",
+      "role": "image"
+    },
+    {
+      "name": "fig.output.points",
+      "kind": "picture",
+      "x": 6.171,
+      "y": 1.42,
+      "w": 0.698,
+      "h": 0.48,
+      "z": 15,
+      "alt": "pptdraw:image:/Users/Admin/Desktop/Draw/out/assets/synthetic_points.png",
+      "role": "image"
+    },
+    {
+      "name": "fig.panel",
+      "kind": "text",
+      "x": 0.2,
+      "y": 0.08,
+      "w": 2.6,
+      "h": 0.24,
+      "z": 16,
+      "text": "(a) Overall architecture",
+      "font_size": 9.0,
+      "bold": true,
+      "align": "left",
+      "valign": "top",
+      "text_color": "5B6773",
+      "fill": null,
+      "line": null,
+      "line_width": 0.0,
+      "dash": "solid",
+      "role": "text"
+    },
+    {
+      "name": "fig.label.input",
+      "kind": "text",
+      "x": 0.14,
+      "y": 1.5,
+      "w": 1.06,
+      "h": 0.18,
+      "z": 17,
+      "text": "Input views",
+      "font_size": 8.5,
+      "bold": false,
+      "align": "center",
+      "valign": "top",
+      "text_color": "5B6773",
+      "fill": null,
+      "line": null,
+      "line_width": 0.0,
+      "dash": "solid",
+      "role": "label"
+    },
+    {
+      "name": "fig.label.depth",
+      "kind": "text",
+      "x": 6.05,
+      "y": 1.18,
+      "w": 0.94,
+      "h": 0.15,
+      "z": 18,
+      "text": "Depth",
+      "font_size": 8.0,
+      "bold": false,
+      "align": "center",
+      "valign": "top",
+      "text_color": "5B6773",
+      "fill": null,
+      "line": null,
+      "line_width": 0.0,
+      "dash": "solid",
+      "role": "label"
+    },
+    {
+      "name": "fig.label.points",
+      "kind": "text",
+      "x": 6.05,
+      "y": 1.9,
+      "w": 0.94,
+      "h": 0.15,
+      "z": 19,
+      "text": "Point map",
+      "font_size": 8.0,
+      "bold": false,
+      "align": "center",
+      "valign": "top",
+      "text_color": "5B6773",
+      "fill": null,
+      "line": null,
+      "line_width": 0.0,
+      "dash": "solid",
+      "role": "label"
+    },
+    {
+      "name": "fig.edge.skip.label",
+      "kind": "text",
+      "x": 3.197,
+      "y": 2.0,
+      "w": 0.916,
+      "h": 0.21,
+      "z": 20,
+      "text": "skip connection",
+      "font_size": 8.5,
+      "bold": false,
+      "align": "center",
+      "valign": "middle",
+      "text_color": "5B6773",
+      "fill": "FFFFFF",
+      "line": null,
+      "line_width": 0.0,
+      "dash": "solid",
+      "alt": "pptdraw:detour-label:fig.edge.skip:bottom:True",
+      "role": "label"
+    }
+  ],
+  "issues": [],
+  "issue_count": 0
+}
