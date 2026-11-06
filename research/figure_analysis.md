@@ -36,6 +36,8 @@ python research/render_pages.py   # 可选：重新渲染整页截图
 
 裁图已提交在 `research/crops/`，不下载 PDF 也能阅读本分析。
 
+> 版权说明：论文截图版权归原作者与会议/期刊所有，这里仅用于制图方法的研究与评论，不作为论文素材再分发。
+
 ![架构类图](figure_gallery_architecture.png)
 
 ![概念/3D/结果网格类图](figure_gallery_concepts.png)
